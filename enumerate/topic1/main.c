@@ -1,10 +1,9 @@
 #include<stdio.h>
 
 
-void GetHundredChickens(int buf[][3], int *nNum, int nLen)
+void GetHundredChickens(int nTotalMoney, int buf[][3], int *nNum, int nLen)
 {
 	int nCnt = 0;
-	int nTotalMoney = 100;
 	int nCockPrice = 5;
 	int nHenPrice = 3;
 	int n3ChickPrice = 1;
@@ -35,10 +34,11 @@ void GetHundredChickens(int buf[][3], int *nNum, int nLen)
 
 int main()
 {
+	int nTotalMoney = 100;
 	int nCnt = 0;
 	int buf[500][3];
 
-	GetHundredChickens(buf, &nCnt, 500);
+	GetHundredChickens(nTotalMoney, buf, &nCnt, 500);
 	
 	printf("total method is %d\n", nCnt);
 	for(int i = 0; i < nCnt; i++)
